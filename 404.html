@@ -1,0 +1,468 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Coaching femme - Methode F.A.M. Reconcilie-toi avec ton corps, retrouve ton energie et ta feminite. Sans regime.">
+</head>
+<body>
+<title>Anaïs — Coaching femme · Méthode F.A.M</title>
+<style>
+  :root{
+    --cream:#F9E6BC; --cream-2:#FDF3DA; --cream-3:#FFFBF0;
+    --teal:#158B9E; --teal-deep:#0E7484; --teal-ink:#FDF3DA;
+    --pink:#FB4FA0; --pink-soft:#FFD9EC;
+    --ink:#3C3320; --ink-soft:#7A6E52;
+    --line:#EAD6A6;
+    --radius:22px; --maxw:1080px;
+    --round:ui-rounded,"Baloo 2","Fredoka","Nunito","Segoe UI Variable","Segoe UI",system-ui,sans-serif;
+    --shadow:0 2px 0 rgba(14,116,132,.10),0 18px 34px -22px rgba(14,116,132,.5);
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0}
+  body{background:var(--cream);color:var(--ink);font-family:var(--round);font-size:17.5px;
+    line-height:1.55;-webkit-font-smoothing:antialiased}
+  h1,h2,h3{font-family:var(--round);font-weight:800;line-height:1.05;letter-spacing:-.01em;
+    text-wrap:balance;margin:0;color:var(--teal)}
+  p{margin:0}
+  a{color:inherit}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 22px}
+  .pink{color:var(--pink)}
+  section{padding:74px 0}
+  @media(max-width:640px){section{padding:52px 0}body{font-size:16.5px}}
+  .eyebrow{font-weight:800;font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:var(--pink)}
+
+  .btn{display:inline-flex;align-items:center;gap:.5em;font-family:var(--round);font-weight:800;
+    font-size:16.5px;padding:15px 30px;border-radius:999px;text-decoration:none;cursor:pointer;
+    border:none;transition:transform .14s ease,box-shadow .2s ease,background .2s}
+  .btn-primary{background:var(--teal);color:var(--teal-ink);box-shadow:var(--shadow)}
+  .btn-primary:hover{transform:translateY(-2px);background:var(--teal-deep)}
+  .btn-pink{background:var(--pink);color:#fff;box-shadow:0 18px 30px -18px rgba(251,79,160,.9)}
+  .btn-pink:hover{transform:translateY(-2px)}
+  .btn-ghost{background:transparent;color:var(--teal);border:2.5px solid var(--teal)}
+  .btn-ghost:hover{background:var(--teal);color:var(--teal-ink)}
+
+  header.nav{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--cream) 90%,transparent);
+    backdrop-filter:blur(8px);border-bottom:2px solid var(--line)}
+  .nav-in{display:flex;align-items:center;justify-content:space-between;height:64px}
+  .brand{font-family:var(--round);font-weight:800;font-size:22px;color:var(--teal);text-decoration:none}
+  .brand em{font-style:normal;color:var(--pink)}
+  .nav-cta{padding:10px 22px;font-size:15px}
+
+  .hero{padding:64px 0 58px;text-align:center}
+  .hero h1{font-size:clamp(38px,7vw,68px)}
+  .hero .sub{display:inline-block;margin-top:18px;background:var(--teal);color:var(--teal-ink);
+    font-weight:800;padding:9px 22px;border-radius:999px;font-size:clamp(15px,2.4vw,19px);transform:rotate(-1.2deg)}
+  .hero .lede{max-width:38ch;margin:26px auto 0;font-size:19px;color:var(--ink);font-weight:600}
+  .hero .cta{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-top:30px}
+  .hero .micro{margin-top:20px;font-size:14.5px;color:var(--ink-soft);font-weight:700}
+
+  .reco{background:var(--cream-2);border-top:2px solid var(--line);border-bottom:2px solid var(--line)}
+  .reco h2{font-size:clamp(26px,4vw,38px);text-align:center;max-width:20ch;margin:0 auto 10px}
+  .reco .lede{text-align:center;max-width:52ch;margin:0 auto;color:var(--ink);font-weight:600}
+  .chips{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin-top:30px}
+  .chip{background:var(--cream-3);border:2px solid var(--line);border-radius:16px;padding:16px 20px;
+    font-weight:700;font-size:15.5px;max-width:250px;box-shadow:var(--shadow)}
+  .chip b{color:var(--teal);display:block;font-weight:800;margin-bottom:3px}
+
+  .truth{text-align:center}
+  .truth h2{font-size:clamp(28px,4.5vw,46px);max-width:16ch;margin:0 auto}
+  .truth .lede{max-width:48ch;margin:20px auto 0;font-size:18.5px;color:var(--ink);font-weight:600}
+
+  .method h2{font-size:clamp(30px,5vw,50px);text-align:center}
+  .method .lede{text-align:center;max-width:54ch;margin:16px auto 0;color:var(--ink);font-weight:600}
+  .phases{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:44px}
+  @media(max-width:820px){.phases{grid-template-columns:1fr}}
+  .phase{background:var(--cream-3);border:2px solid var(--line);border-radius:var(--radius);padding:28px;
+    box-shadow:var(--shadow);position:relative}
+  .phase .let{font-family:var(--round);font-weight:800;font-size:64px;line-height:.8;color:var(--pink)}
+  .phase .lab{font-weight:800;font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;
+    color:var(--teal);margin:8px 0 12px}
+  .phase h3{font-size:21px;margin-bottom:10px}
+  .phase p{font-size:15.5px;color:var(--ink);font-weight:500}
+
+  .get{background:var(--teal);color:var(--teal-ink)}
+  .get h2{color:#fff;font-size:clamp(28px,4.5vw,42px);text-align:center;max-width:20ch;margin:0 auto}
+  .get-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:36px;max-width:820px;
+    margin-left:auto;margin-right:auto}
+  @media(max-width:640px){.get-grid{grid-template-columns:1fr}}
+  .get-item{display:flex;gap:13px;background:rgba(255,255,255,.10);border-radius:16px;padding:16px 18px;
+    font-weight:600;font-size:15.5px;align-items:flex-start}
+  .get-item .tk{color:var(--pink);font-weight:800;flex:none;font-size:19px;line-height:1.2}
+
+  .forwho{text-align:center}
+  .forwho h2{font-size:clamp(26px,4vw,40px);max-width:20ch;margin:0 auto 8px}
+  .forwho .lede{max-width:50ch;margin:0 auto 26px;color:var(--ink);font-weight:600}
+  .yes{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;max-width:760px;margin:0 auto}
+  .yes span{background:var(--pink-soft);color:var(--teal-deep);border-radius:999px;padding:11px 18px;
+    font-weight:700;font-size:15px}
+
+  .closing{background:var(--cream-2);border-top:2px solid var(--line);text-align:center}
+  .closing h2{font-size:clamp(30px,5.5vw,54px);max-width:18ch;margin:0 auto}
+  .closing .lede{max-width:44ch;margin:20px auto 0;font-size:19px;color:var(--ink);font-weight:600}
+  .closing .cta{margin-top:30px}
+  .closing .micro{margin-top:18px;font-size:14px;color:var(--ink-soft);font-weight:700}
+
+  footer{background:var(--teal-deep);color:#EAF6F8;padding:40px 0}
+  .foot{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;align-items:flex-start}
+  .foot .brand{color:#fff}
+  .foot a{color:#BEE9EF;font-weight:700;text-decoration:none}
+  .foot small{display:block;max-width:56ch;margin-top:10px;color:#A9D6DD;font-weight:500;font-size:12.5px;line-height:1.6}
+
+  .reveal{opacity:0;transform:translateY(16px);transition:opacity .6s ease,transform .6s ease}
+  .reveal.in{opacity:1;transform:none}
+  @media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none}.btn:hover{transform:none}}
+
+  /* ===== QUESTIONNAIRE OVERLAY ===== */
+  .quiz{position:fixed;inset:0;z-index:60;background:var(--cream);overflow-y:auto;display:none}
+  .quiz.open{display:block}
+  body.locked{overflow:hidden}
+  .quiz-top{position:sticky;top:0;background:color-mix(in srgb,var(--cream) 92%,transparent);
+    backdrop-filter:blur(8px);border-bottom:2px solid var(--line);z-index:2}
+  .quiz-top .row{display:flex;align-items:center;justify-content:space-between;height:60px}
+  .quiz-close{background:none;border:none;font-family:var(--round);font-weight:800;color:var(--teal);
+    font-size:15px;cursor:pointer;display:flex;gap:6px;align-items:center}
+  .bar{height:7px;background:var(--line);border-radius:99px;overflow:hidden}
+  .bar > i{display:block;height:100%;background:var(--pink);width:25%;transition:width .35s ease}
+  .quiz-body{max-width:640px;margin:0 auto;padding:34px 22px 90px}
+  .step{display:none;animation:fade .35s ease}
+  .step.on{display:block}
+  @keyframes fade{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+  .step .kick{font-weight:800;color:var(--pink);font-size:13px;letter-spacing:.1em;text-transform:uppercase}
+  .step h2{font-size:clamp(26px,4.5vw,36px);margin:8px 0 6px}
+  .step .hint{color:var(--ink-soft);font-weight:600;margin-bottom:26px}
+  .field{margin-bottom:22px}
+  .field > label{display:block;font-weight:800;color:var(--teal-deep);margin-bottom:9px;font-size:16px}
+  .field .q-sub{font-weight:600;color:var(--ink-soft);font-size:13.5px;margin:-4px 0 10px}
+  input[type=text],input[type=email],input[type=tel],select,textarea{
+    width:100%;font-family:var(--round);font-weight:600;font-size:16px;color:var(--ink);
+    background:var(--cream-3);border:2px solid var(--line);border-radius:14px;padding:14px 16px;outline:none}
+  textarea{min-height:90px;resize:vertical}
+  input:focus,select:focus,textarea:focus{border-color:var(--teal)}
+  .opts{display:grid;gap:10px}
+  .opts.two{grid-template-columns:1fr 1fr}
+  @media(max-width:520px){.opts.two{grid-template-columns:1fr}}
+  .opt{display:flex;gap:11px;align-items:center;background:var(--cream-3);border:2px solid var(--line);
+    border-radius:14px;padding:13px 15px;font-weight:700;font-size:15px;cursor:pointer;transition:.15s}
+  .opt:hover{border-color:var(--teal)}
+  .opt input{accent-color:var(--pink);width:18px;height:18px;flex:none}
+  .opt.sel{border-color:var(--pink);background:var(--pink-soft)}
+  .scale{display:flex;gap:8px;flex-wrap:wrap}
+  .scale button{flex:1;min-width:40px;font-family:var(--round);font-weight:800;font-size:16px;
+    background:var(--cream-3);border:2px solid var(--line);border-radius:12px;padding:12px 0;cursor:pointer;color:var(--teal-deep)}
+  .scale button.sel{background:var(--pink);border-color:var(--pink);color:#fff}
+  .quiz-nav{display:flex;justify-content:space-between;gap:12px;margin-top:14px}
+  .thanks{display:none;text-align:center;padding:60px 0}
+  .thanks.on{display:block;animation:fade .4s ease}
+  .thanks .big{font-size:66px}
+  .thanks h2{font-size:clamp(28px,5vw,42px);margin:12px 0}
+  .thanks p{max-width:40ch;margin:0 auto;color:var(--ink);font-weight:600}
+</style>
+
+<header class="nav">
+  <div class="wrap nav-in">
+    <a class="brand" href="#top">anaïs<em>.</em></a>
+    <a class="btn btn-primary nav-cta js-open" href="#q">Candidater</a>
+  </div>
+</header>
+
+<a id="top"></a>
+<section class="hero">
+  <div class="wrap">
+    <h1>Tu reprends <span class="pink">TOUJOURS</span><br>ce que tu perds&nbsp;?</h1>
+    <div class="sub">Et non — c'est pas ta faute.</div>
+    <p class="lede">Je t'aide à te réconcilier avec ton corps, à retrouver ton énergie et ta féminité. Sans régime. Sans te priver. Et cette fois, <b>pour de bon</b>.</p>
+    <div class="cta">
+      <a class="btn btn-pink js-open" href="#q">Je veux ma transformation →</a>
+      <a class="btn btn-ghost" href="#methode">Découvrir la méthode</a>
+    </div>
+    <p class="micro">Coaching individuel · 12 semaines · femmes actives de 30 à 50 ans</p>
+  </div>
+</section>
+
+<section class="reco">
+  <div class="wrap">
+    <h2>Tu as tout essayé. Sauf une méthode pensée pour <span class="pink">toi</span>.</h2>
+    <p class="lede">Les régimes, la motivation en dents de scie, le corps qui ne suit plus depuis les enfants… Si tu te reconnais, tu es exactement au bon endroit.</p>
+    <div class="chips">
+      <div class="chip reveal"><b>Le sport ? Jamais vraiment.</b>Tu commences, tu lâches, tu culpabilises.</div>
+      <div class="chip reveal"><b>Les régimes qui reviennent.</b>Tu perds… puis tu reprends tout, voire plus.</div>
+      <div class="chip reveal"><b>Le corps d'après grossesse.</b>Tu commences à croire que c'est « comme ça ».</div>
+      <div class="chip reveal"><b>« C'est pas pour moi. »</b><span class="pink">Faux.</span> C'est juste qu'on t'a mal accompagnée.</div>
+    </div>
+  </div>
+</section>
+
+<section class="truth">
+  <div class="wrap">
+    <span class="eyebrow">Ce que personne ne t'a dit</span>
+    <h2 style="margin-top:12px">Le problème, ça a <span class="pink">jamais</span> été ta volonté.</h2>
+    <p class="lede">Si les régimes échouent, ce n'est pas parce que tu « manques de discipline ». C'est parce qu'ils ignorent trois choses : ton corps de femme, ton cycle, et ta vraie vie. On répare ça — ensemble.</p>
+  </div>
+</section>
+
+<section id="methode" class="method">
+  <div class="wrap">
+    <span class="eyebrow" style="display:block;text-align:center">La méthode</span>
+    <h2 style="margin-top:10px">La Méthode <span class="pink">F.A.M</span></h2>
+    <p class="lede">Trois phases pour transformer ton corps <em>et</em> ta relation à toi-même. Parce que le mental précède toujours le physique durable.</p>
+    <div class="phases">
+      <article class="phase reveal">
+        <div class="let">F</div><div class="lab">Féminité</div>
+        <h3>Reprends ta place de femme</h3>
+        <p>Se reconnecter à soi, arrêter de s'oublier derrière tout le monde, retrouver sa confiance et sortir du mode « survie ». Le socle sans lequel rien ne tient.</p>
+      </article>
+      <article class="phase reveal">
+        <div class="let">A</div><div class="lab">Alignement</div>
+        <h3>Retrouve ton corps, durablement</h3>
+        <p>Comprendre enfin comment fonctionne ton corps, manger simplement et sans interdit, bouger sans te punir. La fin du yo-yo, sans frustration ni extrême.</p>
+      </article>
+      <article class="phase reveal">
+        <div class="let">M</div><div class="lab">Métamorphose</div>
+        <h3>Retrouve ta santé &amp; ton énergie</h3>
+        <p>Plus d'énergie du matin au soir, un meilleur sommeil, un bien-être qui dure bien après le coaching. Te sentir enfin forte et vivante.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="get">
+  <div class="wrap">
+    <h2>Concrètement, pendant 12 semaines</h2>
+    <div class="get-grid">
+      <div class="get-item"><span class="tk">✓</span><span><b>Un appel d'onboarding (60 min)</b> pour poser tes objectifs et ton plan sur-mesure.</span></div>
+      <div class="get-item"><span class="tk">✓</span><span><b>Un suivi individuel chaque mois</b> avec mesures, ajustements et motivation.</span></div>
+      <div class="get-item"><span class="tk">✓</span><span><b>WhatsApp, 1 check par semaine</b> — tu n'es jamais seule face à un imprévu.</span></div>
+      <div class="get-item"><span class="tk">✓</span><span><b>Ton programme sport personnalisé</b> (maison ou salle), vidéos à l'appui, adapté à ton cycle.</span></div>
+      <div class="get-item"><span class="tk">✓</span><span><b>Ta nutrition féminine</b> simple, flexible, sans interdit ni calcul obsessionnel.</span></div>
+      <div class="get-item"><span class="tk">✓</span><span><b>Le Guide F.A.M + ton rituel quotidien</b> pour sortir du « tout ou rien ».</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="forwho">
+  <div class="wrap">
+    <span class="eyebrow">Est-ce pour toi&nbsp;?</span>
+    <h2 style="margin-top:12px">Ce coaching est fait pour toi si…</h2>
+    <p class="lede">Il est exigeant, humain, et il ne promet pas de miracle. Il promet du durable.</p>
+    <div class="yes">
+      <span>tu es prête à t'occuper enfin de toi</span>
+      <span>tu veux un cadre, pas un programme de plus</span>
+      <span>tu cherches du durable, pas un régime éclair</span>
+      <span>tu es prête à te mettre (un peu) en priorité</span>
+    </div>
+  </div>
+</section>
+
+<section id="q" class="closing">
+  <div class="wrap">
+    <span class="eyebrow">Ta place t'attend</span>
+    <h2 style="margin-top:12px">On commence par faire <span class="pink">connaissance</span>.</h2>
+    <p class="lede">Réponds à quelques questions. Si on est faites pour travailler ensemble, on planifie ton premier échange.</p>
+    <div class="cta"><a class="btn btn-pink js-open" href="#q">Je réponds au questionnaire →</a></div>
+    <p class="micro">Sans engagement · Réponse sous 48 h · Places limitées</p>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap foot">
+    <div>
+      <a class="brand" href="#top" style="font-size:24px">anaïs<span style="color:var(--pink)">.</span></a>
+      <small>Coaching transformation femme · Méthode F.A.M™. Accompagnement bien-être, activité physique et hygiène de vie. Ne se substitue pas à un avis médical ; en cas de pathologie, grossesse ou traitement, consulte un professionnel de santé. Résultats non garantis, variables selon chacune.</small>
+    </div>
+    <div style="font-weight:700">
+      <a class="js-open" href="#q">Candidater →</a><br>
+      <a href="https://www.instagram.com/anais.hours2change/" style="display:inline-block;margin-top:10px">@anais.hours2change</a>
+    </div>
+  </div>
+</footer>
+
+<!-- ===== QUESTIONNAIRE ===== -->
+<div class="quiz" id="quiz" aria-hidden="true">
+  <div class="quiz-top">
+    <div class="wrap">
+      <div class="row">
+        <a class="brand" href="#top" style="font-size:20px">anaïs<em style="font-style:normal;color:var(--pink)">.</em></a>
+        <button class="quiz-close" id="quizClose" type="button">✕ Fermer</button>
+      </div>
+      <div style="padding-bottom:12px"><div class="bar"><i id="barFill"></i></div></div>
+    </div>
+  </div>
+
+  <form class="quiz-body" id="quizForm" onsubmit="return false">
+    <!-- STEP 1 -->
+    <div class="step on" data-step="1">
+      <div class="kick">Étape 1 / 4</div>
+      <h2>Faisons connaissance 👋</h2>
+      <p class="hint">Deux minutes, promis. Il n'y a pas de mauvaise réponse.</p>
+      <div class="field"><label>Ton prénom</label><input type="text" placeholder="Prénom"></div>
+      <div class="field"><label>Ton email</label><input type="email" placeholder="prenom@email.com"></div>
+      <div class="field"><label>Ton WhatsApp</label><input type="tel" placeholder="06 12 34 56 78"></div>
+      <div class="field"><label>Ton âge</label>
+        <div class="opts two" data-single>
+          <label class="opt"><input type="radio" name="age"> Moins de 30 ans</label>
+          <label class="opt"><input type="radio" name="age"> 30 – 39 ans</label>
+          <label class="opt"><input type="radio" name="age"> 40 – 50 ans</label>
+          <label class="opt"><input type="radio" name="age"> Plus de 50 ans</label>
+        </div>
+      </div>
+      <div class="field"><label>Ta situation</label>
+        <div class="opts two" data-single>
+          <label class="opt"><input type="radio" name="situ"> Avec enfant(s)</label>
+          <label class="opt"><input type="radio" name="situ"> Sans enfant</label>
+        </div>
+      </div>
+    </div>
+
+    <!-- STEP 2 -->
+    <div class="step" data-step="2">
+      <div class="kick">Étape 2 / 4</div>
+      <h2>Où tu en es aujourd'hui</h2>
+      <p class="hint">Pour comprendre ton histoire, pas pour te juger.</p>
+      <div class="field"><label>Comment tu te sens dans ton corps en ce moment ?</label>
+        <div class="q-sub">1 = pas bien du tout · 10 = totalement en paix</div>
+        <div class="scale" data-scale></div>
+      </div>
+      <div class="field"><label>Qu'est-ce que tu as déjà essayé ?</label>
+        <div class="q-sub">Plusieurs réponses possibles</div>
+        <div class="opts">
+          <label class="opt"><input type="checkbox"> Des régimes (Dukan, sachets, jeûne…)</label>
+          <label class="opt"><input type="checkbox"> Des applis de comptage de calories</label>
+          <label class="opt"><input type="checkbox"> La salle de sport / des coachs</label>
+          <label class="opt"><input type="checkbox"> Rien de vraiment sérieux jusqu'ici</label>
+        </div>
+      </div>
+      <div class="field"><label>Ton rapport au sport</label>
+        <div class="opts" data-single>
+          <label class="opt"><input type="radio" name="sport"> Je n'en ai jamais vraiment fait</label>
+          <label class="opt"><input type="radio" name="sport"> J'aimerais, mais je n'arrive pas à m'y tenir</label>
+          <label class="opt"><input type="radio" name="sport"> J'en fais un peu, sans régularité</label>
+        </div>
+      </div>
+      <div class="field"><label>Ton niveau d'énergie au quotidien</label>
+        <div class="opts two" data-single>
+          <label class="opt"><input type="radio" name="ener"> Souvent épuisée</label>
+          <label class="opt"><input type="radio" name="ener"> Ça dépend des jours</label>
+          <label class="opt"><input type="radio" name="ener"> Plutôt correcte</label>
+          <label class="opt"><input type="radio" name="ener"> Bonne, c'est ailleurs que ça coince</label>
+        </div>
+      </div>
+    </div>
+
+    <!-- STEP 3 -->
+    <div class="step" data-step="3">
+      <div class="kick">Étape 3 / 4</div>
+      <h2>Ce que tu veux <span class="pink">vraiment</span></h2>
+      <p class="hint">Ferme les yeux et imagine-toi dans 3 mois.</p>
+      <div class="field"><label>Ton objectif principal</label>
+        <div class="opts" data-single>
+          <label class="opt"><input type="radio" name="obj"> Me sentir enfin bien dans mon corps</label>
+          <label class="opt"><input type="radio" name="obj"> Retrouver mon énergie</label>
+          <label class="opt"><input type="radio" name="obj"> Reprendre confiance en moi</label>
+          <label class="opt"><input type="radio" name="obj"> Sortir des régimes à répétition</label>
+          <label class="opt"><input type="radio" name="obj"> Installer une vraie routine durable</label>
+        </div>
+      </div>
+      <div class="field"><label>Pourquoi maintenant ? Qu'est-ce qui a déclenché le déclic ?</label>
+        <textarea placeholder="Écris avec tes mots…"></textarea>
+      </div>
+      <div class="field"><label>Sur une échelle de 1 à 10, à quel point c'est important pour toi ?</label>
+        <div class="scale" data-scale></div>
+      </div>
+    </div>
+
+    <!-- STEP 4 -->
+    <div class="step" data-step="4">
+      <div class="kick">Étape 4 / 4</div>
+      <h2>On avance ensemble</h2>
+      <p class="hint">Dernière ligne droite.</p>
+      <div class="field"><label>Es-tu prête à t'investir (temps et moyens) pour y arriver ?</label>
+        <div class="opts" data-single>
+          <label class="opt"><input type="radio" name="inv"> Oui, à 100 %, je veux vraiment que ça change</label>
+          <label class="opt"><input type="radio" name="inv"> Oui, si je sens que c'est la bonne méthode</label>
+          <label class="opt"><input type="radio" name="inv"> Je me renseigne pour l'instant</label>
+        </div>
+      </div>
+      <div class="field"><label>Quand aimerais-tu commencer ?</label>
+        <div class="opts two" data-single>
+          <label class="opt"><input type="radio" name="start"> Tout de suite</label>
+          <label class="opt"><input type="radio" name="start"> Dans le mois</label>
+          <label class="opt"><input type="radio" name="start"> Je réfléchis encore</label>
+        </div>
+      </div>
+      <div class="field"><label>Un dernier mot pour Anaïs ?</label>
+        <textarea placeholder="Ce que tu veux ajouter, une peur, une question…"></textarea>
+      </div>
+    </div>
+
+    <div class="quiz-nav">
+      <button type="button" class="btn btn-ghost" id="prevBtn" style="visibility:hidden">← Retour</button>
+      <button type="button" class="btn btn-primary" id="nextBtn">Continuer →</button>
+    </div>
+  </form>
+
+  <div class="thanks wrap" id="thanks">
+    <div class="big">🌷</div>
+    <h2>Merci, c'est envoyé&nbsp;!</h2>
+    <p>Anaïs regarde ta réponse avec attention. Si vous êtes faites pour travailler ensemble, tu reçois une proposition de créneau sous 48&nbsp;h. À très vite&nbsp;!</p>
+    <div style="margin-top:26px"><button type="button" class="btn btn-pink" id="backSite">Revenir au site</button></div>
+  </div>
+</div>
+
+<script>
+(function(){
+  // reveal on scroll
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.14});
+  document.querySelectorAll('.reveal').forEach(function(el){io.observe(el);});
+
+  // build 1-10 scales
+  document.querySelectorAll('[data-scale]').forEach(function(sc){
+    for(var i=1;i<=10;i++){var b=document.createElement('button');b.type='button';b.textContent=i;
+      b.addEventListener('click',function(){sc.querySelectorAll('button').forEach(function(x){x.classList.remove('sel');});this.classList.add('sel');});
+      sc.appendChild(b);}
+  });
+
+  // option highlight (radio = exclusive within its group, checkbox = toggle)
+  document.querySelectorAll('.opt').forEach(function(opt){
+    var inp=opt.querySelector('input');
+    opt.addEventListener('click',function(){
+      setTimeout(function(){
+        if(inp.type==='radio'){
+          document.querySelectorAll('input[name="'+inp.name+'"]').forEach(function(r){r.closest('.opt').classList.remove('sel');});
+        }
+        opt.classList.toggle('sel', inp.checked);
+      },0);
+    });
+  });
+
+  var quiz=document.getElementById('quiz'), form=document.getElementById('quizForm'),
+      thanks=document.getElementById('thanks'), bar=document.getElementById('barFill'),
+      prev=document.getElementById('prevBtn'), next=document.getElementById('nextBtn');
+  var steps=Array.prototype.slice.call(form.querySelectorAll('.step')), cur=0, total=steps.length;
+
+  function render(){
+    steps.forEach(function(s,i){s.classList.toggle('on', i===cur);});
+    bar.style.width=((cur+1)/total*100)+'%';
+    prev.style.visibility= cur===0 ? 'hidden':'visible';
+    next.textContent= cur===total-1 ? 'Envoyer ma réponse ✓' : 'Continuer →';
+    quiz.scrollTo({top:0,behavior:'smooth'});
+  }
+  function open(){quiz.classList.add('open');document.body.classList.add('locked');quiz.setAttribute('aria-hidden','false');
+    form.style.display='block';thanks.classList.remove('on');cur=0;render();}
+  function close(){quiz.classList.remove('open');document.body.classList.remove('locked');quiz.setAttribute('aria-hidden','true');}
+
+  document.querySelectorAll('.js-open').forEach(function(a){a.addEventListener('click',function(e){e.preventDefault();open();});});
+  document.getElementById('quizClose').addEventListener('click',close);
+  document.getElementById('backSite').addEventListener('click',close);
+  document.addEventListener('keydown',function(e){if(e.key==='Escape'&&quiz.classList.contains('open'))close();});
+
+  next.addEventListener('click',function(){
+    if(cur<total-1){cur++;render();}
+    else{form.style.display='none';bar.style.width='100%';thanks.classList.add('on');quiz.scrollTo({top:0,behavior:'smooth'});}
+  });
+  prev.addEventListener('click',function(){if(cur>0){cur--;render();}});
+})();
+</script>
+
+</body>
+</html>
